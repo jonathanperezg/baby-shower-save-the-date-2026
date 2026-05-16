@@ -46,40 +46,117 @@ function CountdownUnit({ value, label }: { value: number; label: string }) {
   )
 }
 
-// Coffee cup SVG icon
-function CoffeeCup() {
+function BabyBrewingVignette() {
   return (
     <div className="relative flex flex-col items-center">
-      {/* Steam */}
       <div className="flex gap-3 mb-1 h-8">
         <div className="steam-1 w-[2px] rounded-full bg-latte/40 h-6 self-end" />
         <div className="steam-2 w-[2px] rounded-full bg-latte/40 h-7 self-end" />
         <div className="steam-3 w-[2px] rounded-full bg-latte/40 h-5 self-end" />
       </div>
-      {/* Cup */}
-      <svg width="56" height="52" viewBox="0 0 56 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {/* Cup body */}
-        <path
-          d="M8 10 L12 44 Q12 46 14 46 L42 46 Q44 46 44 44 L48 10 Z"
-          fill="#F5E6D3"
-          stroke="#C49A6C"
-          strokeWidth="1"
-        />
-        {/* Coffee surface */}
-        <ellipse cx="28" cy="13" rx="17" ry="4" fill="#C49A6C" opacity="0.35" />
-        {/* Latte art circle */}
-        <ellipse cx="28" cy="13" rx="9" ry="2.2" fill="none" stroke="#FAF3EB" strokeWidth="0.8" opacity="0.7" />
-        {/* Handle */}
-        <path
-          d="M44 18 Q56 18 56 28 Q56 38 44 38"
-          fill="none"
-          stroke="#C49A6C"
-          strokeWidth="1"
-          strokeLinecap="round"
-        />
-        {/* Saucer */}
-        <ellipse cx="28" cy="48" rx="24" ry="3.5" fill="#EDD9C0" stroke="#C49A6C" strokeWidth="0.8" />
+
+      <svg
+        className="w-[220px] md:w-[280px] h-auto"
+        viewBox="0 0 260 140"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        {/* Bow / ribbon at top center */}
+        <g transform="translate(130, 14)">
+          <path d="M0 0 C-14 -8 -24 2 -13 8 C-6 12 0 6 0 0Z" fill="#A0BFD4" opacity="0.55" />
+          <path d="M0 0 C14 -8 24 2 13 8 C6 12 0 6 0 0Z" fill="#A0BFD4" opacity="0.55" />
+          <circle cx="0" cy="2" r="3" fill="#8AA5C4" opacity="0.65" />
+          <path d="M-3 5 C-8 14 -15 19 -11 21" stroke="#A0BFD4" strokeWidth="1.2" fill="none" opacity="0.45" />
+          <path d="M3 5 C8 14 15 19 11 21" stroke="#A0BFD4" strokeWidth="1.2" fill="none" opacity="0.45" />
+        </g>
+
+        {/* Baby bottle — left, slightly tilted */}
+        <g transform="translate(58, 62) rotate(-12)">
+          <path d="M-1.5 -38 C-1.5 -42 1.5 -42 1.5 -38" fill="#D4A88C" stroke="#C49A6C" strokeWidth="0.5" />
+          <path d="M-3.5 -32 C-3.5 -38 3.5 -38 3.5 -32" fill="#D4A88C" stroke="#C49A6C" strokeWidth="0.6" />
+          <rect x="-6" y="-32" width="12" height="4" rx="1.5" fill="#EDD9C0" stroke="#C49A6C" strokeWidth="0.6" />
+          <rect x="-9" y="-28" width="18" height="42" rx="3.5" fill="#E8EEF6" stroke="#C49A6C" strokeWidth="0.7" opacity="0.9" />
+          <rect x="-7" y="-12" width="14" height="24" rx="2" fill="#FAF3EB" opacity="0.55" />
+          <line x1="-5" y1="-6" x2="-1" y2="-6" stroke="#C49A6C" strokeWidth="0.4" opacity="0.3" />
+          <line x1="-5" y1="0" x2="-1" y2="0" stroke="#C49A6C" strokeWidth="0.4" opacity="0.3" />
+          <line x1="-5" y1="6" x2="-1" y2="6" stroke="#C49A6C" strokeWidth="0.4" opacity="0.3" />
+        </g>
+
+        {/* Coffee cup — center */}
+        <g transform="translate(130, 55)">
+          <path
+            d="M-22 -22 L-18 26 Q-18 28 -16 28 L16 28 Q18 28 18 26 L22 -22 Z"
+            fill="#F5E6D3" stroke="#C49A6C" strokeWidth="1"
+          />
+          <ellipse cx="0" cy="-19" rx="19" ry="4.5" fill="#C49A6C" opacity="0.35" />
+          <path
+            d="M0 -16 C-2.5 -20 -8 -20 -8 -17 C-8 -14 0 -11 0 -11 C0 -11 8 -14 8 -17 C8 -20 2.5 -20 0 -16Z"
+            fill="#FAF3EB" opacity="0.5"
+          />
+          <path
+            d="M18 -14 Q32 -14 32 -2 Q32 10 18 10"
+            fill="none" stroke="#C49A6C" strokeWidth="1" strokeLinecap="round"
+          />
+          <ellipse cx="0" cy="30" rx="28" ry="4.2" fill="#EDD9C0" stroke="#C49A6C" strokeWidth="0.8" />
+        </g>
+
+        {/* Pacifier — right side */}
+        <g transform="translate(206, 66) rotate(15)">
+          <ellipse cx="0" cy="0" rx="11" ry="7.5" fill="#F5E6D3" stroke="#C49A6C" strokeWidth="0.7" />
+          <ellipse cx="13" cy="0" rx="5.5" ry="4.2" fill="#D4A88C" stroke="#C49A6C" strokeWidth="0.5" opacity="0.65" />
+          <circle cx="-11" cy="0" r="4.5" fill="none" stroke="#C49A6C" strokeWidth="0.8" />
+          <circle cx="-2" cy="-1.5" r="0.9" fill="#C49A6C" opacity="0.2" />
+          <circle cx="2.5" cy="-1.5" r="0.9" fill="#C49A6C" opacity="0.2" />
+        </g>
+
+        {/* Scattered hearts */}
+        <g transform="translate(36, 24) scale(0.8)">
+          <path d="M0 3 C-1 -1 -5 -1 -5 2 C-5 5 0 8 0 8 C0 8 5 5 5 2 C5 -1 1 -1 0 3Z" fill="#A0BFD4" opacity="0.45" />
+        </g>
+        <g transform="translate(224, 30) scale(0.65)">
+          <path d="M0 3 C-1 -1 -5 -1 -5 2 C-5 5 0 8 0 8 C0 8 5 5 5 2 C5 -1 1 -1 0 3Z" fill="#C49A6C" opacity="0.35" />
+        </g>
+        <g transform="translate(212, 110) scale(0.55)">
+          <path d="M0 3 C-1 -1 -5 -1 -5 2 C-5 5 0 8 0 8 C0 8 5 5 5 2 C5 -1 1 -1 0 3Z" fill="#A0BFD4" opacity="0.4" />
+        </g>
+        <g transform="translate(46, 114) scale(0.6)">
+          <path d="M0 3 C-1 -1 -5 -1 -5 2 C-5 5 0 8 0 8 C0 8 5 5 5 2 C5 -1 1 -1 0 3Z" fill="#8AA5C4" opacity="0.35" />
+        </g>
+        <g transform="translate(108, 28) scale(0.45)">
+          <path d="M0 3 C-1 -1 -5 -1 -5 2 C-5 5 0 8 0 8 C0 8 5 5 5 2 C5 -1 1 -1 0 3Z" fill="#A0BFD4" opacity="0.3" />
+        </g>
+        <g transform="translate(158, 26) scale(0.5)">
+          <path d="M0 3 C-1 -1 -5 -1 -5 2 C-5 5 0 8 0 8 C0 8 5 5 5 2 C5 -1 1 -1 0 3Z" fill="#8AA5C4" opacity="0.3" />
+        </g>
+
+        {/* Coffee beans */}
+        <g transform="translate(186, 118) rotate(25)">
+          <ellipse rx="5.5" ry="3.5" fill="#C49A6C" opacity="0.4" />
+          <path d="M-3.5 0 C-1.2 -1.8 1.2 1.8 3.5 0" stroke="#8B6914" strokeWidth="0.5" fill="none" opacity="0.3" />
+        </g>
+        <g transform="translate(76, 124) rotate(-15)">
+          <ellipse rx="5" ry="3.2" fill="#C49A6C" opacity="0.35" />
+          <path d="M-3 0 C-1 -1.5 1 1.5 3 0" stroke="#8B6914" strokeWidth="0.5" fill="none" opacity="0.3" />
+        </g>
+        <g transform="translate(170, 124) rotate(40)">
+          <ellipse rx="4.5" ry="2.8" fill="#C49A6C" opacity="0.3" />
+          <path d="M-2.5 0 C-0.8 -1.3 0.8 1.3 2.5 0" stroke="#8B6914" strokeWidth="0.4" fill="none" opacity="0.25" />
+        </g>
       </svg>
+
+      {/* "a baby is brewing" tagline */}
+      <p
+        className="mt-3 text-xl md:text-2xl text-roast/70"
+        style={{
+          fontFamily: "'Cormorant Garamond', serif",
+          fontWeight: 400,
+          fontStyle: 'italic',
+          letterSpacing: '0.04em',
+        }}
+      >
+        a baby is brewing
+      </p>
     </div>
   )
 }
@@ -128,9 +205,9 @@ export default function App() {
           You're invited
         </p>
 
-        {/* Coffee cup illustration */}
+        {/* Baby brewing illustration */}
         <div className="opacity-0-start animate-fade-up delay-400 mb-8">
-          <CoffeeCup />
+          <BabyBrewingVignette />
         </div>
 
         {/* Divider */}
