@@ -202,7 +202,7 @@ export default function App() {
           className="opacity-0-start animate-fade-up delay-200 font-sans text-[10px] tracking-[0.35em] uppercase text-latte mb-8"
           style={{ fontWeight: 300 }}
         >
-          You're invited
+          Baby Shower Save the Date
         </p>
 
         {/* Baby brewing illustration */}
@@ -218,7 +218,7 @@ export default function App() {
           className="opacity-0-start animate-fade-up delay-600 font-sans text-[11px] tracking-[0.4em] uppercase text-mocha/70 mb-4"
           style={{ fontWeight: 300 }}
         >
-          Save the Date
+          Celebrating Baby Perez
         </p>
 
         {/* Names */}
